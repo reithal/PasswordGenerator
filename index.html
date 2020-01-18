@@ -8,6 +8,8 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
   <link rel="stylesheet" href="assets/styles/styles.css" />
 
   <title>Password Generator v1.0</title>
@@ -18,18 +20,19 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
         aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="fas fa-unlock-alt"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a class="navbar-brand" href="#">Password Generator v1.0</a><span class="sr-only">(current)</span>
+        <a class="navbar-brand" href="#"><i class="fas fa-unlock-alt"></i> Password Generator v1.0</a><span
+          class="sr-only">(current)</span>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="about.html">About</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
             Search
           </button>
         </form>
@@ -43,50 +46,58 @@
           <h1 id="heading">Password Generator</h1>
           <hr />
           <p>
-            At least one option is required to generate the password.
-            <br />
-            Please choose the password requirements you would like to use:
+            At least one option is required to generate the password. Your password will be displayed here:
           </p>
         </div>
       </div>
       <div id="pw-options" class="row">
         <div class="col">
           <form>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary" id="copyBtn" type="button"><i class="fas fa-unlock-alt"></i></button>
+              </div>
+              <input type="text" class="form-control" readonly id="passwordValue" placeholder="Your New Password Here" aria-label="" aria-describedby="basic-addon1">
+            </div>
             <div class="form-group">
-              <label for="customRange2">Length of Password </label>
-              <input type="range" class="custom-range" min="8" max="128" id="customRange2">
+              <h6>Please choose the password requirements you would
+            like to use:</h6>
+              <label for="customRange">Length of Password: &emsp;<span id="pwLengthOutput"><span>&emsp;</label>
+              <br>
+              <input type="range" min="8" max="128" value="12" id="pwLength" name="passwordLength" class="custom-range">
             </div>
             <div class="form-group">
               <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="specialCharSwitch" />
-                <label class="custom-control-label" for="specialCharSwitch">Special Characters</label>
+                <input type="checkbox" class="custom-control-input" id="upperSwitch" />
+                <label class="custom-control-label" for="upperSwitch">Uppercase Characters</label>
               </div>
               <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="numberCharSwitch" />
-                <label class="custom-control-label" for="numberCharSwitch">Numeric Characters</label>
+                <input type="checkbox" class="custom-control-input" id="lowerSwitch" />
+                <label class="custom-control-label" for="lowerSwitch">Lowercase Characters</label>
               </div>
               <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="lowerCharSwitch" />
-                <label class="custom-control-label" for="lowerCharSwitch">Lowercase Characters</label>
+                <input type="checkbox" class="custom-control-input" id="numberSwitch" />
+                <label class="custom-control-label" for="numberSwitch">Numeric Characters</label>
               </div>
               <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="upperCharSwitch" />
-                <label class="custom-control-label" for="upperCharSwitch">Uppercase Characters</label>
+                <input type="checkbox" class="custom-control-input" id="specialSwitch" />
+                <label class="custom-control-label" for="specialSwitch">Special Characters</label>
               </div>
-            </div>
-            <div class="form-group">
-              <button type="submit" class="btn btn-primary" disabled>
-                Generate Password
-              </button>
-              <button type="submit" class="btn btn-info">Reset Form</button>
             </div>
           </form>
+          <div class="form-group row">
+            <button type="submit" id="generate" class="btn btn-primary">
+              Generate Password
+            </button>
+            <button type="submit" id="reset" class="btn btn-info">Reset Form</button>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <footer>
-    <p>Copyright &copy; 2020, Password Generator</p>
+  <footer class="footer">
+    <p>&copy; 2020, Password Generator</p>
   </footer>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -99,6 +110,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 
 </html>

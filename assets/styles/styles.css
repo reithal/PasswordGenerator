@@ -1,7 +1,38 @@
 body {
-  background: contain / no-repeat url(../images/security_background.png);
+ text-align: left;
 }
 
-.numOfCharControl {
-  width:;
+#generate, #reset{
+  margin: 2px;
+}
+
+.container {
+  width: 80%;
+}
+
+#copyIcon {
+  /* Style the form icons */
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+  
+}
+
+#passwordValue {
+  font-style: italic;
+  color: dimgray;
+  display: inline;
+  width: 80%;
+
+}
+
+.footer {
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  border-top: 2px solid;
+  left: 0;
+  bottom: 0;
 }
