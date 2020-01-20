@@ -15,4 +15,4 @@ The following password parameters are available:
 
 ## Contact
 
-Informaiton about the developer can be obtained here.
+Informaiton about the developer can be obtained here

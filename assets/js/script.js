@@ -1,22 +1,30 @@
+/* 
+  script.js file used for the Password Generator application. 
+  Author: Carlos Mazon
+  Date: Jan 2020
+*/
+
 // Grabbing the Button elements
 var genPassBtn = document.getElementById("generate");
 var resetBtn = document.getElementById("reset");
 var copyButton = document.getElementById("copyBtn")
 
-// Grabbing the configuration
+
+// Grabbing the configuration elements to be selected by the user.
 var passLength = document.getElementById("pwLength");
 var upperSwitch = document.getElementById("upperSwitch");
 var lowerSwitch = document.getElementById("lowerSwitch");
 var numberSwitch = document.getElementById("numberSwitch");
 var specialSwitch = document.getElementById("specialSwitch");
 
-// output windows
+
+// Grabbing elements for the output values
 var pwLengthOutput = document.getElementById("pwLengthOutput");
 var passwordValue = document.getElementById("passwordValue");
 
 
 
-//arrays of the characters to use for password generation
+//Arrays of the characters to use for password generation
 var lowerLetters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var upperLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 // Storing as strings in case 2 numbers are randomly selected first and the system adds them.
@@ -31,6 +39,11 @@ passLength.oninput = function() {
   pwLengthOutput.innerHTML = this.value; 
 } 
 
+/**
+ * Create array of parameter switches for password generation.
+ *
+ * @returns array  list of options selected by the user.
+ */
 function checkConfig() {
   var options=[];
   if(upperSwitch.checked){
@@ -48,17 +61,28 @@ function checkConfig() {
   return options;
 };
 
-// Thank you Nelio
+
+
+
+/**
+ *Thank you Nelio for the demonstration. Returns a random element from array.
+ * @param array
+ * @returns {*} random element
+ */
 var getRandomElement=function(array) {
   var randomIndex=Math.floor(array.length*Math.random());
   return array[randomIndex];
 };
 
+/**
+ * Generates a random string of characters based on user input.
+ *
+ */
+function generatePassword() {
 
-function generatePassword(arr) {
-  // storing the password
   var password = "";
   var options = checkConfig();
+
   if (options.length == 0)
   {
     alert("Please select at least one character option.");
@@ -82,16 +106,21 @@ function generatePassword(arr) {
       password = password + getRandomElement(specialCharacters);
     }
   }
-  console.log(password);
+  
   passwordValue.value=password;
 }
 
-
+/**
+ * Copies the password value in the client's 'clipboard'
+ *
+ */
 function copyPassword() {
+
   passwordValue.select();
   document.execCommand("copy")
 }
 
-genPassBtn.addEventListener("click",generatePassword);
 
+// Listeners for the buttons.
+genPassBtn.addEventListener("click",generatePassword);
 copyButton.addEventListener("click", copyPassword)
