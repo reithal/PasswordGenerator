@@ -1,7 +1,5 @@
 # PasswordGenerator
 
-![alt text](https://reithal.github.io/PasswordGenerator/assets/images/password_generator.png)
-
 ## Introduction
 
 Welcome to a Random Password Generator project. This web application is a simple tool that allows the user to select the criteria or requirements of the password, and then randomly select characters from the different subsets and put together a password of the length specified.
@@ -14,6 +12,14 @@ The following password parameters are available:
 * UpperCase Letters: A-Z
 * Numbers: 0 - 9
 * Special Characters: !?#$%&()*+,-.@/:;<>=[]{}~`|^_
+
+## Screenshot
+
+![alt text](https://reithal.github.io/PasswordGenerator/assets/images/password_generator.png)
+
+## URL Working Demo
+
+<https://reithal.github.io/PasswordGenerator/index.html>
 
 ## Contact
 
