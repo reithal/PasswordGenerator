@@ -6,7 +6,7 @@
 
 // Grabbing the Button elements
 var genPassBtn = document.getElementById("generate");
-var resetBtn = document.getElementById("reset");
+var resetButton = document.getElementById("reset");
 var copyButton = document.getElementById("copyBtn")
 
 
@@ -122,5 +122,16 @@ function copyPassword() {
 
 
 // Listeners for the buttons.
-genPassBtn.addEventListener("click",generatePassword);
-copyButton.addEventListener("click", copyPassword)
+genPassBtn.addEventListener("click",function(event) {
+  event.preventDefault();
+  generatePassword();
+});
+copyButton.addEventListener("click", function(event) {
+
+  copyPassword()
+});
+
+resetButton.addEventListener("click", function(){
+ passwordValue.value="";
+});
+

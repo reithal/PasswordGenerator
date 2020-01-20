@@ -30,6 +30,9 @@ body {
 
 .footer {
   text-align: center;
+  padding-top: 5px;
+  background-color: rgb(70, 69, 69);
+  color: whitesmoke;
   width: 100%;
   position: fixed;
   border-top: 2px solid;
