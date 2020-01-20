@@ -15,4 +15,4 @@ The following password parameters are available:
 
 ## Contact
 
-Informaiton about the developer can be obtained here
+You can reach the developer via github at reithal.github.io.
