@@ -42,23 +42,24 @@
   <section>
     <div class="container">
       <div class="row">
-        <div class="col">
+        <div class="col-md-10">
           <h1 id="heading">Password Generator</h1>
           <hr />
           <p>
             At least one option is required to generate the password. Your password will be displayed here:
           </p>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <button class="btn btn-outline-secondary" id="copyBtn" type="button"><i class="fas fa-copy"></i></button>
+            </div>
+            <input type="text" class="form-control"  id="passwordValue" placeholder="Your New Password Here" aria-label="" aria-describedby="basic-addon1">
+          </div>
         </div>
       </div>
       <div id="pw-options" class="row">
-        <div class="col">
+        <div class="col-md-10">
           <form>
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <button class="btn btn-outline-secondary" id="copyBtn" type="button"><i class="fas fa-copy"></i></button>
-              </div>
-              <input type="text" class="form-control"  id="passwordValue" placeholder="Your New Password Here" aria-label="" aria-describedby="basic-addon1">
-            </div>
+
             <div class="form-group">
               <h6>Please choose the password requirements you would
             like to use:</h6>
