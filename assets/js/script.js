@@ -29,7 +29,7 @@ var lowerLetters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o",
 var upperLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 // Storing as strings in case 2 numbers are randomly selected first and the system adds them.
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var specialCharacters = ["!","?", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "@", "/", ":", ";", "<", ">", "=", "[" , "]", "{", "}", "~", "`", "|", "^", "_" ];
+var specialCharacters = ["!","?", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "@", "/", ":", ";", "<", ">", "=", "[" , "]", "{", "}", "~", "`", "|", "^", "_", '"', "\\" ];
 
 //display the default value of the slider
 pwLengthOutput.innerHTML = passLength.value;
